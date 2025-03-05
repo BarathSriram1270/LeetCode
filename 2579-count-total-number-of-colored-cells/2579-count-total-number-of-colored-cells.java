@@ -1,5 +1,12 @@
 class Solution {
     public long coloredCells(int n) {
-      return 1+(long)2*n*(n-1);
+       long x=1;
+       long c=4;
+       while(n>1){
+        x+=c;
+        c+=4;
+        n--;
+       }
+       return x;
     }
 }
