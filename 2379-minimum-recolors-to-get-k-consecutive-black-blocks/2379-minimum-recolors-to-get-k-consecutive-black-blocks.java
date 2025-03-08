@@ -15,9 +15,9 @@ class Solution {
             }
         }
         if(w<min) min=w;
-        for(int i=1;i<blocks.length()-k+1;i++){
-            if(blocks.charAt(i)=='W') w--;
-            if(blocks.charAt(i+k)=='W') w++;
+        for(int i=k;i<blocks.length();i++){
+            if(blocks.charAt(i)=='W') w++;
+            if(blocks.charAt(i-k)=='W') w--;
             if(w<min) min=w;
         }
         return min;
